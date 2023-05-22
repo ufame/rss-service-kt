@@ -21,6 +21,7 @@ fun Application.configureRouting() {
     val webhookSubService = WebhooksSubscriptionsService(database)
 
     install(Routing) {
+        rootRouter()
         feedRouter(feedService)
         postRouter(postService)
         webhookRouter(webhookSubService)

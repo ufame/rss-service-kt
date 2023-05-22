@@ -42,6 +42,11 @@ dependencies {
     implementation("io.ktor:ktor-client-apache:2.3.0")
     implementation("io.ktor:ktor-client-content-negotiation:2.3.0")
     implementation("io.ktor:ktor-serialization-jackson:2.3.0")
+    implementation("org.apache.logging.log4j:log4j-api:2.7")
+    implementation("org.apache.logging.log4j:log4j-core:2.12.4")
+    implementation("org.apache.logging.log4j:log4j-slf4j-impl:2.7") {
+        exclude(group = "org.slf4j", module = "logback-classic")
+    }
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }
